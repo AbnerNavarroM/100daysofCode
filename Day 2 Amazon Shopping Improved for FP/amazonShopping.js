@@ -42,10 +42,33 @@ const user = {
   
   function buyItem(user) {
     amazonHistory.push(user);
+    const {cart} = user;
+
+    let recordId = makeRandomId();
+    let date = new Date().toISOString();
+  
+    let record = {
+      recordId,
+      date: date.substring(0, 10),
+      totalAmount: result.totalAmount,
+      purchases: user.purchases
+    };
+
+    cart.push(record)
     return Object.assign({}, user, { purchases: user.cart })
   }
   
   function emptyCart(user) {
     amazonHistory.push(user);
     return Object.assign({}, user, { cart: [] })
+  }
+
+  function makeRandomId(length = 9) {
+    let result = '';
+    const characters =
+      'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    for (let i = 0; i < length; i++) {
+      result += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return result;
   }
