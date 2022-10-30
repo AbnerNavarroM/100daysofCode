@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\Day 3 GFG Problem Find First Repeating Element\\findFirstRepeated.js"
+            "program": "${workspaceFolder}\\Day 4 GFG\\Day4.js"
         }
     ]
 }
