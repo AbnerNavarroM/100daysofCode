@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\Day 6 Check if Linked List is Palindrome\\Day6.js"
+            "program": "${workspaceFolder}\\Day 7 Remove loop from a Linked List\\Day7.js"
         }
     ]
 }
